@@ -17,3 +17,5 @@ Some tests are able to be run using
 ```
     npm test
 ```
+
+They will also be automatically run when creating a PR.
