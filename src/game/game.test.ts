@@ -14,24 +14,25 @@ describe('Game class tests', () => {
         const game = new Game();
         game.addPlayer('Test');
         const onePlayerScore = game.displayScores();
-        expect(onePlayerScore).toEqual('| Test: 0 | ');
+        expect(onePlayerScore).toMatch('| Test: 0 | ');
 
         game.addPlayer('Test2');
         const twoPlayerScore = game.displayScores();
-        expect(twoPlayerScore).toEqual('| Test: 0 | Test2: 0 | ');
+        expect(twoPlayerScore).toMatch('| Test: 0 | Test2: 0 | ');
     });
 
     test('Flipping top card flips a card and returns if it is a snap', async () => {
         const game = new Game();
+
         game.playingDeck = new Deck();
 
-        const firstCard = deck.deckStack[deck.deckStack.length - 1];
+        const firstCard = game.playingDeck.deckStack[game.playingDeck.deckStack.length - 1];
         const isSnap = game.playRound();
         //will always be False on first card
         expect(isSnap).toEqual(false);
         expect(game.playingDeck.deckStack.length).toEqual(51);
 
-        const secondCard = deck.deckStack[deck.deckStack.length - 1];
+        const secondCard = game.playingDeck.deckStack[game.playingDeck.deckStack.length - 1];
         const isSnapRoundTwo = game.playRound();
 
         expect(isSnapRoundTwo).toEqual(secondCard.value === firstCard.value);
