@@ -69,7 +69,7 @@ class Game {
     }
 
     /**
-     * returns all the players and their scores to print to the console.
+     * Returns all the players and their scores to print to the console.
      */
 
     displayScores() {

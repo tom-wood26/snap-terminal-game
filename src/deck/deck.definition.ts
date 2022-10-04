@@ -7,8 +7,8 @@ export enum Suit {
 
 export enum Value {
     Ace = 'A',
-    Two = 'C',
-    Three = 'H',
+    Two = '2',
+    Three = '3',
     Four = '4',
     Five = '5',
     Six = '6',

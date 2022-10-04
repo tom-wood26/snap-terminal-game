@@ -10,7 +10,7 @@ describe('Game class tests', () => {
         expect(game.players[0]).toMatchObject({playerName: 'Test'});
     });
 
-    test('Players and there score are displayed correctly', async () => {
+    test('Players and their score are displayed correctly', async () => {
         const game = new Game();
         game.addPlayer('Test');
         const onePlayerScore = game.displayScores();
@@ -21,7 +21,7 @@ describe('Game class tests', () => {
         expect(twoPlayerScore).toEqual('| Test: 0 | Test2: 0 | ');
     });
 
-    test('Fliping top card flips a card and returns if it is a snap', async () => {
+    test('Flipping top card flips a card and returns if it is a snap', async () => {
         const game = new Game();
         game.playingDeck = new Deck();
 

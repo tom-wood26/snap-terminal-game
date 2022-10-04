@@ -1,6 +1,6 @@
 
 /**
- * Controlls state and changes to the playing card deck
+ * Controls state and changes to the playing card deck
  */
 
 import { Card, Suit, Value } from "./deck.definition";

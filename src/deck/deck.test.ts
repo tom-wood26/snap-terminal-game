@@ -13,7 +13,7 @@ describe('Card deck tests', () => {
         expect(originalState).not.toEqual(deck.deckStack);
     });
 
-    test('fliping top card takes it from deck stack and adds it to the open stack', async () => {
+    test('Flipping top card takes it from deck stack and adds it to the open stack', async () => {
         const deck = new Deck();
         const topCardOnDeck = deck.deckStack[deck.deckStack.length -1];
         const flippedCard = deck.flipTopCard();

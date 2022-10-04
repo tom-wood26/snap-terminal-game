@@ -6,14 +6,14 @@ describe('Player class tests', () => {
         expect(player.playerName).toEqual('Test');
     });
 
-    test('Visualise score returns name and score', () => {
+    test('Visualise score function returns name and score', () => {
         const player = new Player('Test');
         expect(player.visualiseNameWithScore()).toEqual('Test: 0');
         player.score += 1;
         expect(player.visualiseNameWithScore()).toEqual('Test: 1');
     });
 
-    test('Shout snap returns the player instance', async () => {
+    test('Shout snap function returns the player instance', async () => {
         const player = new Player("Test");
         
         const postShout = await player.shoutSnap();
