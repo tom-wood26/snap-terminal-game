@@ -3,6 +3,7 @@
 Game of snap played by two computers in a terminal. Once the program is started by running
 
 ```
+    npm install
     npm run start
 ```
 
