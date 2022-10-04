@@ -4,7 +4,8 @@
   "description": "A game of snap played by two computers in the terminal",
   "main": "index.js",
   "scripts": {
-    "test": "jest build"
+    "test": "npx tsc && jest build",
+    "start": "npx ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
